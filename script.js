@@ -10,6 +10,7 @@ form.addEventListener('submit', function () {
   const message = ['Username must be at least 3 characters long', 'Please enter a valid email address.', 'Password must be at least 6 characters long.']
   //username validating
   const usernameInput = document.getElementById('username');
+  trim();console.log(trimmedusernameInput);
   if (usernameInput.value.length < 3) {
     isValid = false + message[0];
     return;
@@ -19,6 +20,7 @@ form.addEventListener('submit', function () {
 
   // email validation
   const userEmail = document.getElementById('email');
+      trim(); console.log(trimmeduserEmail);
   if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(userEmail.value)) {
     isValid = false + message[1];
   } else {
@@ -27,6 +29,7 @@ form.addEventListener('submit', function () {
 
   // password  validation
   const userPassword = document.getElementById('password');
+      trim(); console.log(trimmeduserPassword);
   if (userPassword.length < 8) {
     isValid = false + message[2];
   } else {
