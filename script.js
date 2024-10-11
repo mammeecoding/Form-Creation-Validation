@@ -7,12 +7,12 @@ form.addEventListener('submit', function () {
 
   // validation variable
   const isValid = true;
-  const message = ['Username must be at least 3 characters long', 'Please enter a valid email address.', 'Password must be at least 6 characters long.']
+  const messages = ['Username must be at least 3 characters long', 'Please enter a valid email address.', 'Password must be at least 6 characters long.']
   //username validating
   const usernameInput = document.getElementById('username');
   trim();console.log(trimmedusernameInput);
   if (usernameInput.value.length < 3) {
-    isValid = false + message[0];
+    isValid = false + messages[0];
     return;
   } else {
 
@@ -22,7 +22,7 @@ form.addEventListener('submit', function () {
   const userEmail = document.getElementById('email');
       trim(); console.log(trimmeduserEmail);
   if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(userEmail.value)) {
-    isValid = false + message[1];
+    isValid = false + messages[1];
   } else {
 
   }
@@ -31,16 +31,11 @@ form.addEventListener('submit', function () {
   const userPassword = document.getElementById('password');
       trim(); console.log(trimmeduserPassword);
   if (userPassword.length < 8) {
-    isValid = false + message[2];
+    isValid = false + messages[2];
   } else {
 
   }
-  feedbackDiv.style.display = "block";
-  if (isValid = true) {
-    feedbackDiv.textContent = 'REgistration successful!', feedbackDiv.style.color = "#28a745";
-  } else {
-    feedbackDiv.style.color = "#dc3545"
-  }
+  
   form.submit();
 });
 
