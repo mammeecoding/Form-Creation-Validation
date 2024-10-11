@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 const form = document.getElementById('registrationForm');
 const feedbackDiv = document.getElementById('form-feedback');
 form.addEventListener('submit', function () {
@@ -46,3 +47,4 @@ if (isValid = true) {
 } else {
   feedbackDiv.style.color = "#dc3545"
 }
+});
