@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const usernameInput = document.getElementById('username');
     trim(); console.log(trimmedusernameInput);
     if (usernameInput.value.length < 3) {
-      isValid = false + messages[0];
+      isValid = false + messages.push([0]);
       return;
     } else {
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userEmail = document.getElementById('email');
     trim(); console.log(trimmeduserEmail);
     if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(userEmail.value)) {
-      isValid = false + messages[1];
+      isValid = false + messages.push([1]);
     } else {
 
     }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userPassword = document.getElementById('password');
     trim(); console.log(trimmeduserPassword);
     if (userPassword.value.length < 8) {
-      isValid = false + messages[2];
+      isValid = false + messages.push([2]);
     } else {
 
     }
