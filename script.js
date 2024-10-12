@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const isValid = true;
     const messages = ['Username must be at least 3 characters long', 'Please enter a valid email address.', 'Password must be at least 6 characters long.']
     //username validating
-    const usernameInput = document.getElementById('username');
+    const username = document.getElementById('username');
     trim(); console.log(trimmedusernameInput);
-    if (usernameInput.value.length < 3) {
+    if (username.length < 3) {
       isValid = false + messages.push([0]);
       return;
     } else {
@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // email validation
-    const userEmail = document.getElementById('email');
-    trim(); console.log(trimmeduserEmail);
-    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(userEmail.value)) {
+    const email = document.getElementById('email');
+    trim(); console.log(trimmedemail);
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email.value)) {
       isValid = false + messages.push([1]);
     } else {
 
     }
 
     // password  validation
-    const userPassword = document.getElementById('password');
-    trim(); console.log(trimmeduserPassword);
-    if (userPassword.value.length < 8) {
+    const password = document.getElementById('password');
+    trim(); console.log(trimmedpassword);
+    if (password.length < 8) {
       isValid = false + messages.push([2]);
     } else {
 
