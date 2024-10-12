@@ -14,26 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const username = document.getElementById('username');
     trim(); console.log(trimmedusernameInput);
     if (username.length < 3) {
-      isValid = false + messages.push([0]);
+      isValid = false + messages[0];
       return;
     } else {
 
     }
 
     // email validation
-    const email = document.getElementById('email');
-    trim(); console.log(trimmedemail);
-    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email.value)) {
-      isValid = false + messages.push([1]);
+    const userEmail = document.getElementById('email');
+    trim(); console.log(trimmeduserEmail);
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(userEmail.value)) {
+      isValid = false + messages[1];
     } else {
 
     }
 
     // password  validation
-    const password = document.getElementById('password');
-    trim(); console.log(trimmedpassword);
-    if (password.length < 8) {
-      isValid = false + messages.push([2]);
+    const userPassword = document.getElementById('password');
+    trim(); console.log(trimmeduserPassword);
+    if (userPassword.value.length < 8) {
+      isValid = false + messages[2];
     } else {
 
     }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
      //displaying feedback
      feedbackDiv.style.display = "block";
   if (isValid = true) {
-    feedbackDiv.textContent = "Registration successful", feedbackDiv.style.color = "#28a745";
+    feedbackDiv.textContent = 'Registration successfu', feedbackDiv.style.color = "#28a745";
   } else {
    feedbackDiv.innerHTML(messages.join(br)), feedbackDiv.style.color = "#dc3545";
   }
