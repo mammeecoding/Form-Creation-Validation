@@ -10,7 +10,12 @@ async function fetchUserData() {
   dataContainer.innerHTML = '';
 
   const userList = document.createElement('ul');
-
+  users.array.forEach(element => {
+    document.createElement('li');
+    userList.textContent = "user's name";
+    li.append(userList);
+  });
+  userList.append(dataContainer);
 };
 
 fetchUserData();
