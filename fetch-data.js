@@ -5,6 +5,8 @@ async function fetchUserData() {
     const response = await fetchUserData()
   } catch (error) {
     console.error(`Error: ${error}`);
+    dataContainer.textContent = '';
+    dataContainer.textContent = 'Failed to load user data.';
   }
   const users = await response.json()
   dataContainer.innerHTML = '';
