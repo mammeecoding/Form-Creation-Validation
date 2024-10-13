@@ -13,9 +13,9 @@ async function fetchUserData() {
   users.array.forEach(element => {
     document.createElement('li');
     userList.textContent = "user's name";
-    li.append(userList);
+   li.appendChild(userList);
   });
-  userList.append(dataContainer);
+  userList.appendChild(dataContainer);
 };
 
 fetchUserData();
