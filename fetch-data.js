@@ -19,5 +19,10 @@ async function fetchUserData() {
   });
   userList.appendChild(dataContainer);
 };
-
 fetchUserData();
+document.addEventListener("DOMContentLoaded", () => {
+
+  callback({
+    fetchUserData
+  });
+});
